@@ -3,6 +3,7 @@ import React from 'react'
 import './Advantages.css'
 
 import mill from '../../images/mill.svg'
+import adv from '../../images/adv.png'
 
 const Advantages = () => {
   return (
@@ -43,6 +44,7 @@ const Advantages = () => {
           <p>Мини-описание. Это текст о компании. Он необходим для  продвижения Вашего сайта</p>
         </div>
       </div>
+      <img src={adv} alt='windmills' />
     </section>
   )
 }
