@@ -51,6 +51,15 @@ const VideosCarousel = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1300,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
         breakpoint: 1000,
         settings: {
           arrows: false,
@@ -76,33 +85,9 @@ const VideosCarousel = () => {
           <img src={videos_c} alt="" />
           <img src={play} alt="" className='play-btn'/>
         </div>
-        <div className="videos-item">
-          <img src={videos_d} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
-        <div className="videos-item">
-          <img src={videos_e} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
-        <div className="videos-item">
-          <img src={videos_f} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
       </div>
       <div className="videos-slide" style={{ display: "flex" }}>
-        <div className="videos-item">
-          <img src={videos_a} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
-        <div className="videos-item">
-          <img src={videos_b} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
-        <div className="videos-item">
-          <img src={videos_c} alt="" />
-          <img src={play} alt="" className='play-btn'/>
-        </div>
-        <div className="videos-item">
+      <div className="videos-item">
           <img src={videos_d} alt="" />
           <img src={play} alt="" className='play-btn'/>
         </div>

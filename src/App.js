@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Results from './components/Results/Results';
 import Services from './components/Services/Services';
+import ServicesCarousel from './components/Services/ServicesCarousel';
 import Advantages from './components/Advantages/Advantages';
 import Projects from './components/Projects/Projects';
 import Contacts from './components/Contacts/Contacts';
@@ -19,14 +20,21 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <About />
-      <Results />
-      <Services />
-      <Advantages />
-      <Projects />
+      <div className="container">
+        <About />
+        <Results />
+        <Services />
+      </div>
+        <ServicesCarousel />
+      <div className="container">
+        <Advantages />
+        <Projects />
+      </div>
       <Contacts />
-      <Videos />
-      <Clients/>
+      <div className="container">
+        <Videos />
+        <Clients/>
+      </div>
       <Footer />
     </div>
   );

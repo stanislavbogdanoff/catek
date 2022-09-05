@@ -17,10 +17,6 @@
 .projects-item .green-line {
   margin: 30px 0;
 }
-.slick-next::before, .slick-prev::before {
-  content: '' !important;
-  margin: -30px;
-}
 .projects-item img {
   width: 100%;
 }
