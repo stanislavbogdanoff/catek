@@ -10,6 +10,7 @@
 }
 .services-item {
   max-width: 370px;
+  cursor: grab;
 }
 .services-item img {
   max-width: 99%;
