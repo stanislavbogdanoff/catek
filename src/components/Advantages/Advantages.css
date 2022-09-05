@@ -1,0 +1,53 @@
+.advant-section {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+.advant-details-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.advant-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  width: 88px;
+  border-radius: 100%;
+  background-color: rgba(56, 183, 29, 1);
+}
+.advant-details h4 {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 33px 0 22px 0;
+}
+.advant-details p {
+  font-size: 16px;
+  line-height: 19px;
+}
+@media screen and (max-width: 1440px) {
+  .advant-details-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+  .advant-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .advant-details-box {
+    grid-template-columns: auto;
+  }
+  .advant-section .section-heading h2  {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}

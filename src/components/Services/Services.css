@@ -1,0 +1,44 @@
+.services-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+.services-section .section-heading p {
+  max-width: 450px;
+}
+.services-item {
+  max-width: 370px;
+}
+.services-item img {
+  max-width: 350px;
+  transform: scale(100%);
+  transition: all 0.2s ease-in-out;
+}
+.services-item:hover img {
+  transform: scale(105%);
+}
+.services-item h4 {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 42px 0 22px;
+}
+.services-btn {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(56, 183, 29, 1);
+}
+.services-btn:hover {
+  text-decoration: underline;
+}
+.services-carousel {
+  padding: 20px 0;
+}
+.services-carousel .slick-list {
+  padding: 10px 0;
+}

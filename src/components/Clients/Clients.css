@@ -1,0 +1,8 @@
+.clients-section {
+  margin: 0 0 50px;
+}
+.clients-item {
+  max-height: 78px;
+  padding: 18px 30px;
+  border: solid 1px rgba(229, 229, 229, 1);
+}

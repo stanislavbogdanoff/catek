@@ -1,0 +1,105 @@
+.contacts-section {
+  padding: 110px 150px;
+  background: url("../../images/contacts-bg.png"), rgba(46, 46, 46, 0.9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: rgb(180,180,180);
+}
+.contacts-section h2 {
+  font-size: 55px;
+  line-height: 62px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.contacts-section p {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 27px;
+  width: 100%;
+}
+.contacts-content {
+  position: relative;
+  width: 40%;
+}
+.contacts-content p {
+  width: 100%;
+}
+#contacts .contacts-content p {
+  width: 100%;
+}
+.contacts-content .heading-label {
+  top: 70px;
+  left: -135px;
+}
+.contacts-content input {
+  width: 100%;
+  padding: 17px 5px;
+  font-family: 'Montserrat', sans-serif;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7)
+}
+.contacts-content input::placeholder {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7)
+}
+.contacts-content textarea:focus, input:focus{
+  outline: none;
+}
+.submit-btn {
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: rgb(228,228,228);
+}
+.submit-btn:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.form-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 65px;
+}
+#name {
+  width: 65%;
+}
+#phone-num {
+  width: 30%;
+}
+.contacts-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-bottom: 72px;
+}
+@media screen and (max-width: 1200px) {
+  .contacts-content {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .contacts-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contacts-section {
+    padding: 50px 5%;
+  }
+  .contacts-content {
+    width: 100%;
+  }
+  .form-line {
+    gap: 30px;
+  }
+}
