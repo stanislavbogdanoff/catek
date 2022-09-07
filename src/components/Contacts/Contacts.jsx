@@ -14,10 +14,10 @@ const Contacts = () => {
         </div>
         <h2>ОБРАТНАЯ <br /> СВЯЗЬ</h2>
         <p>Заполните форму, чтобы договориться о встрече с ведущим специалистом компании ЦАТЭК</p>
-        <form action="">
+        <form>
           <div className="form-line">
-            <input type="name" placeholder='Ваше имя' id='name'/>
-            <input type="phone" placeholder='+7 (...)' id='phone-num'/>
+            <input type="text" placeholder='Ваше имя' id='name'/>
+            <input type="number" placeholder='+7 (...)' id='phone-num'/>
           </div>
           <div className="form-line"><input type="text" placeholder='Компания'/></div>
         </form>

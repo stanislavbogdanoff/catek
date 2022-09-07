@@ -9,11 +9,13 @@ const Advantages = () => {
   return (
     <section className="advant-section section">
       <div className="section-heading">
-      <div className="heading-label">
+        <div className="label-box">
+          <div className="heading-label">
             ПОЧЕМУ МЫ?
             <hr className="grey-line" />
           </div>
-        <h2>Наши <br /> перимущества</h2>
+          <h2>Наши <br /> перимущества</h2>
+        </div>
         <p>Почему нужно работать с нами? Мы первпопроходцы в сфере ВИЭ в Казахстане</p>
       </div>
       <div className="advant-details-box">
@@ -44,7 +46,6 @@ const Advantages = () => {
           <p>Мини-описание. Это текст о компании. Он необходим для  продвижения Вашего сайта</p>
         </div>
       </div>
-      <img src={adv} alt='windmills' />
     </section>
   )
 }

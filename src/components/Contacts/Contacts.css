@@ -29,10 +29,6 @@
 #contacts .contacts-content p {
   width: 100%;
 }
-.contacts-content .heading-label {
-  top: 70px;
-  left: -135px;
-}
 .contacts-content input {
   width: 100%;
   padding: 17px 5px;
@@ -82,6 +78,22 @@
   gap: 17px;
   margin-bottom: 72px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.contacts-section .heading-label {
+  position: absolute;
+  top: 70px;
+  left: -100px;
+}
+.contacts-section .section-heading {
+  position: relative;
+}
 @media screen and (max-width: 1200px) {
   .contacts-content {
     width: 60%;
@@ -100,6 +112,10 @@
     width: 100%;
   }
   .form-line {
-    gap: 30px;
+    flex-direction: column;
+    gap: 17px;
+  }
+  #name, #phone-num {
+    width: 100%;
   }
 }

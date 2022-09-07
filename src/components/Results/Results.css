@@ -12,7 +12,7 @@
   text-align: center;
 }
 .results-details {
-  width: 240px;
+  max-width: 240px;
 }
 .results-details h3 {
   font-size: 37px;
@@ -23,20 +23,30 @@
 .results-details font {
   font-size: 20px;
 }
-@media screen and (max-width: 1200px) {
-  .results-details-box {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-}
-@media screen and (max-width: 1050px) {
-  .results-section {
-    padding: 0 5%;
-  }
+.results-section .heading-label {
+  margin-left: -45px;
+  margin-right: -25px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 1000px) {
   .results-section {
-    padding: 0 5%;
+    gap: 50px;
+  }
+  .results-details-box {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .results-details-box {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 350px) {
+  .results-section .section-heading h2 {
+    font-size: 38px;
   }
 }

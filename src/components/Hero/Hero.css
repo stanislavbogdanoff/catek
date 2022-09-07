@@ -79,6 +79,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(56, 183, 29, 0.8);
+}
+.phone-btn:hover {
   background-color: rgba(56, 183, 29, 1);
 }
 @keyframes bounce {
@@ -111,14 +114,17 @@
   .scroll-btn {
     font-size: 18px;
   }
-}
-@media screen and (max-width: 500px) {
   .scroll-btn {
     left: 5%;
+    font-size: 14px;
+    gap: 10px;
   }  
   .phone-btn {
     right: 5%;
   }
+}
+@media screen and (max-width: 500px) {
+
 }
 @media screen and (max-width: 450px) {
   .hero-content h1 {

@@ -50,8 +50,6 @@ const ProjectsCarousel = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
-          dots: false
         }
       },
       {
@@ -59,6 +57,15 @@ const ProjectsCarousel = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1020,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 1
         }
       },
       {

@@ -48,7 +48,6 @@ const ClientsCarousel = () => {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 2,
-          infinite: true,
         }
       },
       {
@@ -56,15 +55,24 @@ const ClientsCarousel = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
-          infinite: true,
+        }
+      },
+      {
+        breakpoint: 1020,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 4,
+          slidesToScroll: 2,
         }
       },
       {
         breakpoint: 980,
         settings: {
+          arrows: false,
+          dots: true,
           slidesToShow: 3,
           slidesToScroll: 2,
-          infinite: true,
         }
       },
       {
@@ -74,7 +82,15 @@ const ClientsCarousel = () => {
           dots: true,
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: true,
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         }
       },
     ]

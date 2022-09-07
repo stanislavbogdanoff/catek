@@ -6,11 +6,13 @@ const Results = () => {
   return (
     <section className="results-section section">
       <div className="section-heading">
+        <div className="label-box">
           <div className="heading-label">
             ЦАТЭК В ЦИФРАХ
             <hr className="grey-line" />
           </div>
           <h2>Наши <br /> ПОКАЗАТЕЛИ</h2>
+        </div>
         <p>Реализация инвестиционных проектов в сфере возобновляемых источников энергии (ВИЭ)</p>
       </div>
       <div className="results-details-box">

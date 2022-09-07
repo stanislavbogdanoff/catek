@@ -77,7 +77,7 @@ const ServicesCarousel = () => {
           }
         },
         {
-          breakpoint: 800,
+          breakpoint: 600,
           settings: {
             arrows: false,
             dots: true,

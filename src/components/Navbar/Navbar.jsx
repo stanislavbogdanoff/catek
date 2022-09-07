@@ -12,7 +12,7 @@ const Navbar = () => {
     setClicked(!clicked)
   }
   const [isTop, setIsTop] = useState(true)
-  let height = window.innerHeight
+  let height = window.innerHeight - 100
   let distanceToTop = window.pageYOffset
   window.addEventListener('scroll', () => {
     distanceToTop = window.pageYOffset
@@ -31,7 +31,7 @@ const Navbar = () => {
         <li><a href="#projects" className='nav-link'>НАШИ проекты</a></li>
         <li><a href="/" className='nav-link'>ПАРТНЕРЫ</a></li>
         <li><a href="/" className='nav-link'>НПА В СФЕРЕ ВИЭ</a></li>
-        <li><a href="#contatcs" className='nav-link'>КОНТАКТЫ</a></li>
+        <li><a href="#contacts" className='nav-link'>КОНТАКТЫ</a></li>
         <div className="lang-select-box">
         <img src={globe} alt="" />
         <select defaultValue='RUS' className='lang-select'>

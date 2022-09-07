@@ -22,7 +22,7 @@ const Footer = () => {
 
         <div className="footer-content-box">
           <h4><a href="#about">о компании</a></h4>
-          <ul>
+          <ul className='footer-ul'>
             <li><a href="#about">О нас</a></li>
             <li><a href="/">Наша история</a></li>
             <li><a href="/">Наша команда</a></li>
@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="footer-content-box" id='large'>
           <h4><a href="#services">наши услуги</a></h4>
-          <ul>
+          <ul className='footer-ul'>
             <li><a href="/">Разработка программ проведения комплексных испытаний объектов ВИЭ</a></li>
             <li><a href="/">Мониторинг состояния воздушных линий электропередач (ЛЭП) и оборудования подстанций с помощью дрона</a></li>
             <li><a href="/">Инспекция ветровых турбин и солнечных панелей с помощью дрона</a></li>
@@ -47,9 +47,9 @@ const Footer = () => {
 
         <div className="footer-content-box" id='contacts'>
           <h4><a href="#contacts">для связи</a></h4>
-          <span><p>Эл. почта:</p><font>info@cge.kz</font></span>
-          <span><p>Адрес:</p><font>г.Нур-Султан ул.Достык 2, <br /> БЦ "SAAD", 8 этаж</font></span>
-          <span><p>Телефон:</p><font id='phone'>+7 7172 95 44 94</font></span>
+          <span><p>Эл. почта:</p><a href = "mailto: info@cge.kz">info@cge.kz</a></span>
+          <span><p>Адрес:</p><font>г.Нур-Султан ул.Достык 2, БЦ "SAAD", 8 этаж</font></span>
+          <span><p>Телефон:</p><a href = "tel:+77172954494" id='phone'>+7 7172 95 44 94</a></span>
         </div>
 
       </div>

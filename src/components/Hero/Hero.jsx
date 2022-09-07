@@ -31,9 +31,9 @@ const Hero = () => {
         <img src={white_arrow} alt="" className='bounce'/>
         УЗНАТЬ БОЛЬШЕ
       </button>
-      <button className='phone-btn'>
+      <a href="tel:+77172954494" className='phone-btn'>
         <img src={phone} alt="" />
-      </button>
+      </a>
     </section>
   )
 }
