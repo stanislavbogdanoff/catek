@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><a href="#about" className='nav-link'>О КОМПАНИИ</a></li>
         <li><a href="#services" className='nav-link'>НАШИ УСЛУГИ</a></li>
         <li><a href="#projects" className='nav-link'>НАШИ проекты</a></li>
-        <li><a href="/" className='nav-link'>ПАРТНЕРЫ</a></li>
+        <li><a href="#clients" className='nav-link'>ПАРТНЕРЫ</a></li>
         <li><a href="/" className='nav-link'>НПА В СФЕРЕ ВИЭ</a></li>
         <li><a href="#contacts" className='nav-link'>КОНТАКТЫ</a></li>
         <div className="lang-select-box">
