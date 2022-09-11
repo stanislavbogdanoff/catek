@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { NavLink } from 'react-router-dom'
 
 import logo from '../../images/logo.svg'
 import globe from '../../images/globe-sm.png'
@@ -10,9 +9,10 @@ const Navbar = () => {
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
     setClicked(!clicked)
+    console.log('clicked')
   }
   const [isTop, setIsTop] = useState(true)
-  let height = window.innerHeight - 100
+  let height = window.innerHeight - 200
   let distanceToTop = window.pageYOffset
   window.addEventListener('scroll', () => {
     distanceToTop = window.pageYOffset
@@ -26,12 +26,12 @@ const Navbar = () => {
         <i className={ clicked ? "fas fa-times fa-2x" : "fas fa-bars fa-2x"} ></i>
       </div>
       <ul className={clicked ? "menu-list" : "menu-list close"}>
-        <li><a href="#about" className='nav-link'>О КОМПАНИИ</a></li>
-        <li><a href="#services" className='nav-link'>НАШИ УСЛУГИ</a></li>
-        <li><a href="#projects" className='nav-link'>НАШИ проекты</a></li>
-        <li><a href="#clients" className='nav-link'>ПАРТНЕРЫ</a></li>
-        <li><a href="/" className='nav-link'>НПА В СФЕРЕ ВИЭ</a></li>
-        <li><a href="#contacts" className='nav-link'>КОНТАКТЫ</a></li>
+        <li onClick={handleClick}><a href="#about"  className='nav-link green-link'>О КОМПАНИИ</a></li>
+        <li onClick={handleClick}><a href="#services" className='nav-link green-link'>НАШИ УСЛУГИ</a></li>
+        <li onClick={handleClick}><a href="#projects" className='nav-link green-link'>НАШИ проекты</a></li>
+        <li onClick={handleClick}><a href="#clients" className='nav-link green-link'>ПАРТНЕРЫ</a></li>
+        <li onClick={handleClick}><a href="/" className='nav-link green-link'>НПА В СФЕРЕ ВИЭ</a></li>
+        <li onClick={handleClick}><a href="#contacts" className='nav-link green-link'>КОНТАКТЫ</a></li>
         <div className="lang-select-box">
         <img src={globe} alt="" />
         <select defaultValue='RUS' className='lang-select'>
@@ -40,7 +40,6 @@ const Navbar = () => {
         </select>
       </div>
       </ul>
-      
     </nav>
   )
 }

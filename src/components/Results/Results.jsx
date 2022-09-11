@@ -9,7 +9,6 @@ const Results = () => {
         <div className="label-box">
           <div className="heading-label">
             ЦАТЭК В ЦИФРАХ
-            <hr className="grey-line" />
           </div>
           <h2>Наши <br /> ПОКАЗАТЕЛИ</h2>
         </div>

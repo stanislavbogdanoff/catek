@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 
 import './Videos.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import FsLightbox from 'fslightbox-react';
 
 import videos_a from '../../images/videos_a.png'
 import videos_b from '../../images/videos_b.png'
@@ -41,6 +43,30 @@ function SamplePrevArrow(props) {
 }
 
 const VideosCarousel = () => {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
+    
+  const openLightboxOnSlide = (number) => {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number
+    });
+  }
+
+  const updateMedia = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const settings = {
     dots: false,
     infinite: true,
@@ -67,89 +93,169 @@ const VideosCarousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1
         }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
     ]
   }
   return (
-    <Slider {...settings} className={Window.innerWidth > 1520 ? 'videos-carousel' : 'videos-carousel mobile'} style={{ display: "flex" }}>
-      
-      <div className="videos-slide" style={{ display: "flex" }}>
-        
-        <div className="slide-line">
+    <>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={[
+          videos_a,
+          videos_b,
+          videos_c,
+          videos_d,
+          videos_e,
+          videos_f,
+        ]}
+        slide={lightboxController.slide}
+      />
+      {
+        isMobile ? (
+          <Slider {...settings} className='videos-carousel mobile'>
+            
+            <div className="videos-slide">
+              <div className="videos-item" >
+                <div className="videos-img" id='a'></div>
+                <button onClick={() => openLightboxOnSlide(1)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
 
-          <div className="videos-item">
-            <img src={videos_a} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+            <div className="videos-slide">
+              <div className="videos-item">
+              <div className="videos-img" id='b'></div>
+              <button onClick={() => openLightboxOnSlide(2)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
 
-          <div className="videos-item">
-            <img src={videos_b} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+            <div className="videos-slide">
+              <div className="videos-item">
+              <div className="videos-img" id='c'></div>
+              <button onClick={() => openLightboxOnSlide(3)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
 
-          <div className="videos-item">
-            <img src={videos_c} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+            <div className="videos-slide">
+              <div className="videos-item">
+              <div className="videos-img" id='d'></div>
+              <button onClick={() => openLightboxOnSlide(4)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
 
-        </div>
+            <div className="videos-slide">
+              <div className="videos-item">
+              <div className="videos-img" id='e'></div>
+              <button onClick={() => openLightboxOnSlide(5)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
 
-        <div className="slide-line" id='second-line'>
-          <div className="videos-item">
-            <img src={videos_d} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-          <div className="videos-item">
-            <img src={videos_e} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-          <div className="videos-item">
-            <img src={videos_f} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-        </div>
+            <div className="videos-slide">
+              <div className="videos-item">
+              <div className="videos-img" id='f'></div>
+              <button onClick={() => openLightboxOnSlide(6)}><img src={play} alt="" className='play-btn'/></button>
+              </div>
+            </div>
+            
+          </Slider>
+        ) : (
 
-      </div>
+          <Slider {...settings} className='videos-carousel'>
+            
+            <div className="videos-slide" style={{ display: "flex" }}>
+              
+              <div className="slide-line">
 
-      <div className="videos-slide" style={{ display: "flex" }}>
-        
-        <div className="slide-line">
+                <div className="videos-item">
+                  <div className="videos-img" id='a'></div>
+                  <button onClick={() => openLightboxOnSlide(1)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
 
-          <div className="videos-item">
-            <img src={videos_a} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='b'></div>
+                  <button onClick={() => openLightboxOnSlide(2)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
 
-          <div className="videos-item">
-            <img src={videos_b} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='c'></div>
+                  <button onClick={() => openLightboxOnSlide(3)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
 
-          <div className="videos-item">
-            <img src={videos_c} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
+              </div>
 
-        </div>
+              <div className="slide-line" id='second-line'>
+                <div className="videos-item">
+                  <div className="videos-img" id='d'></div>
+                  <button onClick={() => openLightboxOnSlide(4)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='e'></div>
+                  <button onClick={() => openLightboxOnSlide(5)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='f'></div>
+                  <button onClick={() => openLightboxOnSlide(6)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+              </div>
 
-        <div className="slide-line" id='second-line'>
-          <div className="videos-item">
-            <img src={videos_d} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-          <div className="videos-item">
-            <img src={videos_e} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-          <div className="videos-item">
-            <img src={videos_f} alt="" />
-            <img src={play} alt="" className='play-btn'/>
-          </div>
-        </div>
-        
-      </div>
-    </Slider>
+            </div>
 
+            <div className="videos-slide" style={{ display: "flex" }}>
+              
+              <div className="slide-line">
+
+                <div className="videos-item">
+                  <div className="videos-img" id='a'></div>
+                  <button onClick={() => openLightboxOnSlide(1)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+
+                <div className="videos-item">
+                  <div className="videos-img" id='b'></div>
+                  <button onClick={() => openLightboxOnSlide(2)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+
+                <div className="videos-item">
+                  <div className="videos-img" id='c'></div>
+                  <button onClick={() => openLightboxOnSlide(3)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+
+              </div>
+
+              <div className="slide-line" id='second-line'>
+                <div className="videos-item">
+                  <div className="videos-img" id='d'></div>
+                  <button onClick={() => openLightboxOnSlide(4)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='e'></div>
+                  <button onClick={() => openLightboxOnSlide(5)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+                <div className="videos-item">
+                  <div className="videos-img" id='f'></div>
+                  <button onClick={() => openLightboxOnSlide(6)}><img src={play} alt="" className='play-btn'/></button>
+                </div>
+              </div>
+
+            </div>
+
+
+            
+            
+          </Slider>
+
+        )
+      }
+    </>
   )
 }
 

@@ -6,15 +6,6 @@ import phone from '../../images/phone.svg'
 import './Hero.css'
 
 const Hero = () => {
-  
-  const scrollToContent = () => {
-    let height = window.innerHeight
-    window.scrollTo({
-      top: height,
-      left: 0,
-      behavior: 'smooth'
-    })
-  }
 
   return (
     <section className='hero-section'>
@@ -27,10 +18,10 @@ const Hero = () => {
           Реализация инвестиционных проектов в сфере ВИЭ
         </h3>
       </div>
-      <button className='scroll-btn' onClick={scrollToContent}>
+      <a href='#about' className='scroll-btn grey-link'>
         <img src={white_arrow} alt="" className='bounce'/>
         УЗНАТЬ БОЛЬШЕ
-      </button>
+      </a>
       <a href="tel:+77172954494" className='phone-btn'>
         <img src={phone} alt="" />
       </a>

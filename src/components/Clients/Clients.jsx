@@ -6,7 +6,7 @@ import './Clients.css'
 
 const Clients = () => {
   return (
-    <section className="clients-section section">
+    <section className="clients-section section" id='clients'>
       <ClientsCarousel />
     </section>
   )

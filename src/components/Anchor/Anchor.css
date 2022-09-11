@@ -1,0 +1,24 @@
+.anchor-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: rgba(84, 84, 84, 0.3);
+  z-index: 110;
+  transform: translateY(100px);
+  transition: all 0.2s ease-in-out;
+}
+.anchor-btn.active {
+  transform: translateY(0);
+}
+.anchor-btn.active:hover {
+  background-color: rgba(56, 183, 29, 0.8);
+}
+.anchor-btn img {
+  transform: rotate(-90deg);
+}

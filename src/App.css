@@ -21,6 +21,7 @@ button {
   cursor: pointer;
 }
 .App {
+  position: relative;
   overflow-x: hidden;
 }
 .section {
@@ -54,24 +55,27 @@ button {
   font-size: 15px;
   line-height: 18px;
   color: rgba(153, 153, 153, 1);
-  transform: rotate(270deg);
-  float: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 9px;
-  margin-left: -32px;
   white-space: nowrap;
+  margin: 0;
+  text-orientation: sideways;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
 }
-.grey-line {
-  width: 60px;
-  height: 2px;
-  border: none;
-  background-color: rgba(153, 153, 153, 1);
+.heading-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  z-index: 100;
+  background-color: rgb(154, 154, 154);
+  width: 2px;
+  height: 60px;
 }
 .label-box {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 45px;
 }
 .container {
   max-width: 1216px;
@@ -81,20 +85,61 @@ button {
   content: '' !important;
   margin: -30px;
 }
+.green-link::after {
+  bottom: -5px;
+  right: 0;
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+  background-color: rgba(56, 183, 29, 1);
+  z-index: 110;
+  transition: opacity 0.3s, transform 0.3s
+}
+.grey-link::after {
+  bottom: -5px;
+  right: 0;
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+  background-color: rgb(154, 154, 154);
+  z-index: 110;
+  transition: opacity 0.3s, transform 0.3s
+}
+.green-link.large::after, .grey-link.large::after {
+  height: 2px;
+}
+.green-link:hover::after, .green-link:focus::after, .grey-link:hover::after, .grey-link:focus::after {
+  transform: scale(1);
+}
+.carousel-item {
+  transform: scale(100%);
+  transition: transform 0.2s ease-in-out;
+}
+.carousel-item:hover {
+  transform: scale(105%);
+}
 ::-webkit-scrollbar {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
   visibility: none;
-  background-color: rgba(153, 153, 153, 0.5);
+  background-color: rgba(153, 153, 153, 0.3);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(56, 183, 29, 0.6);
+  background-color: rgba(56, 183, 29, 0.8);
   width: 12px;
   border-radius: 12px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(56, 183, 29, 0.8)
+  background-color: rgb(116, 234, 87);
 }
 @media screen and (max-width: 1400px) {
   .slick-next::before, .slick-prev::before {
@@ -148,7 +193,7 @@ button {
     width: 100%;
   }
   .container {
-    padding: 0 3%;
+    padding: 0 4%;
   }
   .slick-dots {
     bottom: -50px !important;
@@ -173,6 +218,7 @@ button {
 @media screen and (max-width: 400px) {
 
   .section-heading p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }

@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className="footer-heading">
         <img src={logo} alt="" className='logo'/>
-        <button className="contact-btn">
+        <button className="contact-btn grey-link">
           <img src={white_arrow} alt="" />
           Связаться с нами
         </button>

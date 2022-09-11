@@ -1,5 +1,5 @@
 .contacts-section {
-  padding: 110px 150px;
+  padding: 110px 0;
   background: url("../../images/contacts-bg.png"), rgba(46, 46, 46, 0.9);
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,6 @@
   font-size: 55px;
   line-height: 62px;
   font-weight: 400;
-  margin-bottom: 12px;
   color: #fff;
 }
 .contacts-section p {
@@ -19,8 +18,10 @@
   margin-bottom: 27px;
   width: 100%;
 }
+.contacts-section .label-box {
+  margin-bottom: 30px;
+}
 .contacts-content {
-  position: relative;
   width: 40%;
 }
 .contacts-content p {
@@ -36,7 +37,8 @@
   background: none;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 17px;
 }
 .contacts-content input::placeholder {
   font-size: 17px;
@@ -45,7 +47,11 @@
 .contacts-content textarea:focus, input:focus{
   outline: none;
 }
+.contacts-section .heading-label {
+  font-size: 12px;
+}
 .submit-btn {
+  position: relative;
   font-size: 28px;
   line-height: 35px;
   font-weight: 600;
@@ -56,7 +62,6 @@
   color: rgb(228,228,228);
 }
 .submit-btn:hover {
-  text-decoration: underline;
   color: #fff;
 }
 .form-line {
@@ -85,15 +90,9 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
+  font-size: 40px;
 }
-.contacts-section .heading-label {
-  position: absolute;
-  top: 70px;
-  left: -100px;
-}
-.contacts-section .section-heading {
-  position: relative;
-}
+
 @media screen and (max-width: 1200px) {
   .contacts-content {
     width: 60%;
@@ -106,7 +105,7 @@ input[type=number] {
 }
 @media screen and (max-width: 750px) {
   .contacts-section {
-    padding: 50px 5%;
+    padding: 50px 0;
   }
   .contacts-content {
     width: 100%;

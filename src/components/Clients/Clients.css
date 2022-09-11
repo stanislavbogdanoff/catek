@@ -1,5 +1,5 @@
 .clients-section {
-  margin: 0 0 50px;
+  margin: 50px 0 70px;
 }
 .clients-item {
   display: flex !important;
@@ -8,4 +8,12 @@
   max-height: 78px;
   padding: 18px 30px;
   border: solid 1px rgba(229, 229, 229, 1);
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.clients-item:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }

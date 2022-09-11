@@ -3,9 +3,20 @@
   display: flex;
   gap: 85px;
 }
-.about-section h2 {
+.title {
   text-transform: uppercase;
   font-size: 55px;
+  position: relative;
+}
+.title::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  height: 7px;
+  width: 22px;
+  margin-bottom: 15px;
+  background-color: rgba(56, 183, 29, 1);
 }
 .about-section p {
   font-size: 18px;
@@ -20,6 +31,7 @@
 }
 .about-content {
   width: 45%;
+  margin-top: 60px;
 }
 .about-text {
   display: flex;
@@ -38,12 +50,10 @@
   background-color: rgba(56, 183, 29, 1);
 }
 .more-btn {
+  position: relative;
   font-size: 29px;
   color:rgba(56, 183, 29, 1);
   font-weight: 600;
-}
-.more-btn:hover {
-  text-decoration: underline;
 }
 .about-section br {
   height: 50px;

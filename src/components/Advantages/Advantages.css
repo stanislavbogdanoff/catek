@@ -52,6 +52,9 @@
   .advant-section {
     gap: 50px;
   }
+  .advant-details {
+    max-width: unset;
+  }
   .advant-details-box {
     display: flex;
     flex-direction: column;

@@ -12,7 +12,6 @@ const Advantages = () => {
         <div className="label-box">
           <div className="heading-label">
             ПОЧЕМУ МЫ?
-            <hr className="grey-line" />
           </div>
           <h2>Наши <br /> перимущества</h2>
         </div>

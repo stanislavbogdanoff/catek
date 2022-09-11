@@ -2,14 +2,16 @@
   position: fixed;
   width: 100%;
   height: fit-content;
-  padding: 5px 70px;
+  padding: 7px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   color: #fff;
+  transition: background-color 0.5s ease-in-out;
 }
 .nav-link {
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 16px;
@@ -24,7 +26,6 @@
   align-items: center;
   gap: 27px;
   list-style: none;
-  overflow-x: hidden;
 }
 .logo {
   width: 100px;
@@ -41,6 +42,10 @@
   border: none;
   outline: none;
   color: #fff;
+  cursor: pointer;
+}
+.lang-select:hover {
+  color:rgba(56, 183, 29, 1);
 }
 .lang-select select:focus {
   border: none;
@@ -63,6 +68,9 @@
 }
 .navbar.dark {
   background-color: rgba(84, 84, 84, 0.525);
+}
+.navbar.dark .nav-link:hover {
+  color: rgb(116, 234, 87);
 }
 @media screen and (max-width: 1250px) {
   .navbar {

@@ -12,30 +12,41 @@ import Contacts from './components/Contacts/Contacts';
 import Videos from './components/Videos/Videos';
 import Clients from './components/Clients/Clients';
 import Footer from './components/Footer/Footer';
+import Anchor from './components/Anchor/Anchor';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <div className="container">
-        <About />
-        <Results />
-        <Services />
+
+      <header>
+        <Navbar />
+        <Hero />
+      </header>
+      
+      <div className="content">
+        <div className="container">
+          <About />
+          <Results />
+          <Services />
+        </div>
+          <ServicesCarousel />
+        <div className="container">
+          <Advantages />
+          <Projects />
+        </div>
+        <Contacts />
+        <div className="container">
+          <Videos />
+          <Clients/>
+        </div>
       </div>
-        <ServicesCarousel />
-      <div className="container">
-        <Advantages />
-        <Projects />
-      </div>
-      <Contacts />
-      <div className="container">
-        <Videos />
-        <Clients/>
-      </div>
+
       <Footer />
+
+      <Anchor />
+
     </div>
   );
 }

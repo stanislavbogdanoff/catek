@@ -124,9 +124,6 @@ const ClientsCarousel = () => {
       <div className="clients-item">
         <img src={clients_c} alt="" />
       </div>
-      <div className="clients-item">
-        <img src={clients_a} alt="" />
-      </div>
     </Slider>
 
   )

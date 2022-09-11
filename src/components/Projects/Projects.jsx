@@ -11,7 +11,6 @@ const Projects = () => {
           <div className="label-box">
             <div className="heading-label">
               ПОЧЕМУ МЫ?
-              <hr className="grey-line" />
             </div>
             <h2>Наши <br /> проекты</h2>
           </div>

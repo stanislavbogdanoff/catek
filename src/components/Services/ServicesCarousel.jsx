@@ -93,32 +93,32 @@ const ServicesCarousel = () => {
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
       <div className="services-item">
         <img src={image} alt="" />
         <h4 className='services-text'>Разработка программ проведения комплексных испытаний объектов ВИЭ</h4>
-        <button className='services-btn'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
+        <button className='services-btn green-link'>ПОДРОБНЕЕ <img src={arrow} alt="" /></button>
       </div>
     </Slider>
 

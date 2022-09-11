@@ -10,7 +10,6 @@ const Services = () => {
         <div className="label-box">
         <div className="heading-label">
           SCROLL DOWN
-          <hr className="grey-line" />
         </div>
         <h2>Наши <br /> услуги</h2>
         </div>
